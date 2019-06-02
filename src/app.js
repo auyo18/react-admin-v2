@@ -1,6 +1,24 @@
 import React from 'react'
-import ReactDom from 'react-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import TopNav from './components/TopNav'
+import SideNav from './components/SideNav'
+import Home from './views/home'
+import NotFound from './views/NotFound'
+import {Layout} from 'antd'
 
-import './assets/styles/index.scss'
+const App = () => (
+    <Router>
+      <Layout>
+        <SideNav />
+        <Layout>
+          <TopNav />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route component={NotFound} />
+          </Switch>
+        </Layout>
+      </Layout>
+    </Router>
+)
 
-ReactDom.render(<h1>hello react</h1>, document.getElementById('app'))
+export default App

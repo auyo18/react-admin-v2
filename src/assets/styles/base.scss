@@ -9,9 +9,8 @@
 }
 
 body {
-  font: $font-size-small 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', Arial, sans-serif, 'Droid Sans Fallback';
+  font: $font-size-medium 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', Arial, sans-serif, 'Droid Sans Fallback';
   line-height: 1.5;
-  user-select: none;
   -webkit-tap-highlight-color: transparent;
   background: $color-background;
 }
