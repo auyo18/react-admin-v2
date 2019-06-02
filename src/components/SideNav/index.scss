@@ -1,8 +1,14 @@
 @import "../../assets/styles/variable";
+
 .side {
-  .logo{
+  min-height: 100vh;
+
+  .logo {
     height: 32px;
-    background: rgba($color-background, 0.2);
+    color: $color-background;
+    text-align: center;
+    font-size: $font-size-large-x;
     margin: 16px;
+    overflow: hidden;
   }
 }

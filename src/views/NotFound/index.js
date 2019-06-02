@@ -1,7 +1,13 @@
 import React from 'react'
+import withTitle from '../../hoc/withTitle'
+import {Layout} from 'antd'
+
+const {Content} = Layout
 
 const NotFound = () => (
-    <div>404, this is page is not fount</div>
+    <Content className="main-wrapper">
+      <div>404, this is page is not fount</div>
+    </Content>
 )
 
-export default NotFound
+export default withTitle(NotFound)

@@ -4,19 +4,15 @@ import {Layout, Button} from 'antd'
 
 const {Content} = Layout
 
-class Home extends Component {
-  componentWillMount() {
-    console.log(123)
-  }
-
+class About extends Component {
   render() {
     return (
         <Content className="main-wrapper">
-          this is home
+          this is About
           <Button type="primary">Primary</Button>
         </Content>
     )
   }
 }
 
-export default withTitle(Home)
+export default withTitle(About)
