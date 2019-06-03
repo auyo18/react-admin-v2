@@ -2,7 +2,7 @@ const path = require('path')
 
 const config = {
   entry: {
-    app: './src/Alone.js'
+    app: './src/index.js'
   },
   output: {
     path: path.join(__dirname, '../dist'),

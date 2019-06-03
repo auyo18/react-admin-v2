@@ -1,16 +1,10 @@
-import types from './types'
+import {combineReducers} from 'redux'
+import TopNavReducer from '../components/TopNav/store/reducer'
+import LoginReducer from '../views/Login/store/reducer'
 
-const defaultState = {
-  collapsed: false
-}
+const reducer = combineReducers({
+  topNav: TopNavReducer,
+  login: LoginReducer
+})
 
-export default (state = defaultState, action) => {
-  const newState = Object.assign({}, state)
-  switch (action.type) {
-    case types.CHANGE_COLLAPSED:
-      newState.collapsed = action.collapsed
-      return newState
-    default:
-      return state
-  }
-}
+export default reducer

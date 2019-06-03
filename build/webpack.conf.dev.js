@@ -23,8 +23,8 @@ const config = merge(baseWebpackConfig, {
   devServer,
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'Alone.js.html',
-      template: 'Alone.js.html',
+      filename: 'index.html',
+      template: 'index.html',
       inject: true
     })
   ]

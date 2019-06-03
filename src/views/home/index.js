@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import withTitle from '../../hoc/withTitle'
 import {Layout, Button} from 'antd'
 
 const {Content} = Layout
@@ -15,4 +14,4 @@ class Home extends Component {
   }
 }
 
-export default withTitle(Home)
+export default Home

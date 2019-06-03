@@ -3,13 +3,11 @@ import {connect} from "react-redux"
 import {Layout, Icon, Menu, Dropdown, Avatar} from 'antd'
 import './index.scss'
 import {changeCollapsed} from "../../store/actions"
+import {logout} from "../../views/Login/store/actions"
 
 const {Header} = Layout
 
 class TopNav extends Component {
-
-
-
   render() {
     return (
         <Header className="header" style={{background: '#fff', padding: 0}}>
@@ -23,23 +21,20 @@ class TopNav extends Component {
           <div className="right">
             <Dropdown overlay={<Menu>
               <Menu.Item>
-                <a rel="noopener noreferrer" href="">
-                  <Icon type="user" />
-                  个人中心
-                </a>
+                <Icon type="user" />
+                个人中心
               </Menu.Item>
               <Menu.Item>
-                <a rel="noopener noreferrer" href="">
-                  <Icon type="setting" />
-                  个人设置
-                </a>
+                <Icon type="setting" />
+                个人设置
               </Menu.Item>
               <Menu.Divider />
-              <Menu.Item>
-                <a rel="noopener noreferrer" href="">
-                  <Icon type="logout" />
-                  退出登录
-                </a>
+              <Menu.Item onClick={() => {
+                this.props.logout()
+                this.props.history.push('/login')
+              }}>
+                <Icon type="logout" />
+                退出登录
               </Menu.Item>
             </Menu>}>
               <div className="info">
@@ -56,12 +51,15 @@ class TopNav extends Component {
 }
 
 const mapStateToProps = state => ({
-  collapsed: state.collapsed
+  collapsed: state.topNav.collapsed
 })
 
 const mapDispatchToProps = dispatch => ({
   onBreakpoint(collapsed) {
     dispatch(changeCollapsed(collapsed))
+  },
+  logout() {
+    dispatch(logout())
   }
 })
 

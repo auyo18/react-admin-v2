@@ -1,0 +1,24 @@
+@import "../../assets/styles/variable";
+
+.login {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  .login-form {
+    margin: 120px auto;
+    width: 520px;
+    max-width: 100%;
+    padding: 35px 35px 15px;
+
+    h2 {
+      text-align: center;
+      font-size: $font-size-large-xx;
+      margin-bottom: 20px;
+    }
+
+    .login-form-button {
+      width: 100%;
+    }
+  }
+}

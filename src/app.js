@@ -5,22 +5,19 @@ import TopNav from './components/TopNav'
 import SideNav from './components/SideNav'
 import {Layout} from 'antd'
 
-const authed = false
-
 const App = (props) => {
-  console.log(props)
   return (
-    <Router>
-      <Layout>
-        <SideNav/>
+      <Router>
         <Layout>
-          <TopNav/>
-          {
-            renderRoutes(props.route.routes)
-          }
+          <SideNav />
+          <Layout>
+            <TopNav history={props.history} />
+            {
+              renderRoutes(props.route.routes)
+            }
+          </Layout>
         </Layout>
-      </Layout>
-    </Router>
+      </Router>
   )
 }
 

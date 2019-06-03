@@ -13,21 +13,18 @@ const routes = [
     key: 'Login'
   },
   {
-    path: '/login1',
-    component: About,
-    exact: true,
-    title: '登录1',
-    key: 'About1'
-  },
-  {
-    path: '/',
     component: App,
     auth: true,
     key: 'App',
-    redirect: '/Home',
     routes: [
       {
-        path: '/Home',
+        path: '/',
+        exact: true,
+        redirect: '/home',
+        key: 'Default'
+      },
+      {
+        path: '/home',
         component: Home,
         exact: true,
         title: '首页',
@@ -43,7 +40,7 @@ const routes = [
       {
         component: NotFound,
         title: '找不到当前页面',
-        key: 'NotFound',
+        key: 'NotFound'
       }
     ]
   }

@@ -44,7 +44,7 @@ class SideMenu extends Component {
 }
 
 const mapStateToProps = state => ({
-  collapsed: state.collapsed
+  collapsed: state.topNav.collapsed
 })
 
 const mapDispatchToProps = dispatch => ({

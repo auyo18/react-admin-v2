@@ -7,14 +7,12 @@ import store from './store'
 import routes from './router/routes'
 import './assets/styles/index.scss'
 
-const authed = false
-
 ReactDom.render(
-  <Provider store={store}>
-    <Router>
-      {
-        renderRoutes(routes, authed)
-      }
-    </Router>
-  </Provider>,
-  document.getElementById('app'))
+    <Provider store={store}>
+      <Router>
+        {
+          renderRoutes(routes)
+        }
+      </Router>
+    </Provider>,
+    document.getElementById('app'))
