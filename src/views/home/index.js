@@ -5,10 +5,6 @@ import {Layout, Button} from 'antd'
 const {Content} = Layout
 
 class Home extends Component {
-  componentWillMount() {
-    console.log(123)
-  }
-
   render() {
     return (
         <Content className="main-wrapper">

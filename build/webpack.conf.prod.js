@@ -28,8 +28,8 @@ const config = merge(baseWebpackConfig, {
       chunkFilename: 'css/[name].[chunkhash:8].css'
     }),
     new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "index.html",
+      filename: "Alone.js.html",
+      template: "Alone.js.html",
       inject: true,
       minify: {
         removeComments: true,

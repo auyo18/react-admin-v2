@@ -1,22 +1,27 @@
 import React from 'react'
 import {BrowserRouter as Router} from 'react-router-dom'
-import {renderRoutes} from 'react-router-config'
+import {renderRoutes} from "./utils"
 import TopNav from './components/TopNav'
 import SideNav from './components/SideNav'
 import {Layout} from 'antd'
 
-const App = props => (
+const authed = false
+
+const App = (props) => {
+  console.log(props)
+  return (
     <Router>
       <Layout>
-        <SideNav />
+        <SideNav/>
         <Layout>
-          <TopNav />
+          <TopNav/>
           {
             renderRoutes(props.route.routes)
           }
         </Layout>
       </Layout>
     </Router>
-)
+  )
+}
 
 export default App
